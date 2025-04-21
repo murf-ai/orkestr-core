@@ -67,7 +67,7 @@ The Scheduler can asynchronously run tasks at a specific interval or at a specif
 
 Health checks are implemented by combining the drift detector, event bus, and scheduler. The scheduler will run the drift detector at a specific interval. The drift detector will check the state of the infrastructure and services and send events to the event bus if there are any discrepancies. The event bus will then notify the appropriate components to take action.
 
-### Orchestrator
+## Orchestrator
 
 The orchestrator is a core component of Orkestr that manages the lifecycle of clusters and nodes. It ensures that the desired state of the infrastructure is maintained by handling tasks such as scaling, adding, or removing nodes, and resolving drift.
 
