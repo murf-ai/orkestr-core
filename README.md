@@ -77,6 +77,6 @@ async def main():
 asyncio.run(main())
 ```
 
-## Concepts
+## Docs
 
-To know more about Orkestr, see the [Docs](./docs/TableOfContents.md).
+To know more about Orkestr, see the [Docs](./docs/README.md).

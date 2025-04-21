@@ -2,10 +2,10 @@
 
 Orkestr is built around the following concepts:
 
-- **Node**: A node is a single instance of a virtual machine, container, or any other type of compute resource. A node can be a physical machine, a virtual machine, a container, or any other type of compute resource.
-- **Cluster**: A cluster is a group of nodes that are managed as a single unit. A cluster can be a group of virtual machines, containers, or any other type of node.
-- **Service**: A service is a group of clusters that are managed as a single unit.
-- **Provider**: A provider is a cloud provider that provides compute resources.
+- **Node**: A node is a single instance of a virtual machine, container, or any other type of compute resource.
+- **Cluster**: A cluster is a group of nodes with the same configuration, managed as a single unit.
+- **Service**: Group of clusters that are expected to run the same application/task.
+- **Provider**: A provider is a cloud vendor that provides compute resources.
 - **Datastore**: A datastore is a storage system that is used to store the state of the infrastructure and services.
 - **Event Bus**: An event bus is a message broker that is used to send and receive events between different components of the system.
 - **Scheduler**: A scheduler is a component that is used to schedule tasks and events in the system.
@@ -13,7 +13,7 @@ Orkestr is built around the following concepts:
 
 ### Cluster
 
-Use a cluster when you need to manage a group of nodes that will have the same set of configurations. A cluster will comprise of a single instance/machine type and the infra will be deployed to a single region. You can define the configurations like machine type, user data script, environment variables, etc. to deploy multiple nodes together in a cluster. You can set up the minimum, maximum, and desired number of nodes in a cluster.
+Use a cluster when you need to manage a group of nodes that will have the same set of configurations. A cluster will comprise of a single instance/machine type and the infra will be deployed to a single region. You can define the configurations like machine type, user data script, environment variables, etc. To deploy multiple nodes together in a cluster. You can set up the minimum, maximum, and desired number of nodes in a cluster.
 
 When a machine in a cluster goes down, Orkestr will automatically replace it with a new machine. You can also manually scale the cluster by setting the desired number of nodes in a cluster.
 
@@ -34,7 +34,7 @@ Use a service when you need to manage a group of clusters. The clusters are expe
 
 ### Provider
 
-Orkestr is designed to be provider-agnostic. You can use any cloud provider that provides compute resources. You can also use multiple providers in a single Orkestr instance. Each provider will have to configure their implementations of `Node`. Each provider is also expected to have a `client` that will interact with the provider's API.
+Orkestr is designed to be provider-agnostic. You should be able to use any cloud provider which provides an API to manage their compute resources. You can use multiple providers in a single Orkestr instance. Each provider will have to configure their implementations of `Node`. Each provider is also expected to have a `client` that will interact with the provider's API.
 
 Orkestr provides implementations of the `Provider` interface for the following cloud providers:
 
@@ -51,7 +51,7 @@ Orkestr provides implementations of the `Datastore` interface for the following 
 
 ## Drift Detector
 
-The Drift Detector is a critical component of Orkestr that ensures the desired state of infrastructure and services is maintained.
+The Drift Detector is a function of Orkestr that ensures the desired state of infrastructure and services is maintained.
 
 For more details, see the [Drift Detector documentation](./src/orkestr_core/base/drift_detector/README.md).
 

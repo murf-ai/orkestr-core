@@ -2,16 +2,16 @@
 
 #### General
 
-- [README](../README.md)
+- [Overview](../README.md)
 - [Concepts](Concepts.md)
 - [Drift Detector](../src/orkestr_core/base/drift_detector/README.md)
 
-#### Datastores
+#### Datastore Implementations
 
 - [SQLite](../src/orkestr_core/datastores/sqlite/README.md)
 - [DynamoDB](../src/orkestr_core/datastores/dynamodb/README.md)
 
-#### Providers
+#### Provider Implementations
 
 - [Lambda Labs](../src/orkestr_core/providers/lambda_labs/README.md)
 - [Test Provider](../src/orkestr_core/providers/test_provider/README.md)
