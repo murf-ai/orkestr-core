@@ -79,4 +79,4 @@ asyncio.run(main())
 
 ## Concepts
 
-To know more about the concepts of Orkestr, see the [Concepts documentation](./docs/Concepts.md).
+To know more about Orkestr, see the [Docs](./docs/TableOfContents.md).
