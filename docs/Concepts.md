@@ -38,7 +38,7 @@ Orkestr is designed to be provider-agnostic. You should be able to use any cloud
 
 Orkestr provides implementations of the `Provider` interface for the following cloud providers:
 
-- [Lambda Labs](./src/orkestr_core/providers/lambda_labs/README.md)
+- [Lambda Labs](../src/orkestr_core/providers/lambda_labs/README.md)
 
 ### Datastore
 
@@ -46,14 +46,12 @@ Orkestr uses a datastore to store the state of the infrastructure and services. 
 
 Orkestr provides implementations of the `Datastore` interface for the following storage systems:
 
-- [DynamoDB](./src/orkestr_core/datastores/dynamodb/README.md)
-- [SQLite](./src/orkestr_core/datastores/sqlite/README.md)
+- [DynamoDB](../src/orkestr_core/datastores/dynamodb/README.md)
+- [SQLite](../src/orkestr_core/datastores/sqlite/README.md)
 
 ## Drift Detector
 
 The Drift Detector is a function of Orkestr that ensures the desired state of infrastructure and services is maintained.
-
-For more details, see the [Drift Detector documentation](./src/orkestr_core/base/drift_detector/README.md).
 
 ## Event Bus
 

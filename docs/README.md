@@ -4,7 +4,6 @@
 
 - [Overview](../README.md)
 - [Concepts](Concepts.md)
-- [Drift Detector](../src/orkestr_core/base/drift_detector/README.md)
 
 #### Datastore Implementations
 
