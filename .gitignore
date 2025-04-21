@@ -1,0 +1,10 @@
+__pychache__
+.pytest_cache
+.vscode
+**/__pycache__/
+.env*
+poetry.lock
+tmp/
+dist/
+*.db
+.venv
