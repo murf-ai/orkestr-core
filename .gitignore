@@ -3,7 +3,6 @@ __pychache__
 .vscode
 **/__pycache__/
 .env*
-poetry.lock
 tmp/
 dist/
 *.db
