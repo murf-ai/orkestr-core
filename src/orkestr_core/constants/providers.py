@@ -32,6 +32,9 @@ class OrkestrRegion(Enum):
     US_WEST_1 = "US_WEST_1"
     US_WEST_2 = "US_WEST_2"
     US_WEST_3 = "US_WEST_3"
+    US_SOUTH_1 = "US_SOUTH_1"
+    US_SOUTH_2 = "US_SOUTH_2"
+    US_SOUTH_3 = "US_SOUTH_3"
     US_CENTRAL = "US_CENTRAL"
     EU_WEST = "EU_WEST"
     EU_CENTRAL = "EU_CENTRAL"
@@ -85,6 +88,15 @@ class RegionMapper:
             ProviderName.AZURE: "westus3",
             ProviderName.GCP: "us-west3",
             ProviderName.LAMBDA_LABS: "us-west-3",
+        },
+        OrkestrRegion.US_SOUTH_1: {
+            ProviderName.LAMBDA_LABS: "us-south-1",
+        },
+        OrkestrRegion.US_SOUTH_2: {
+            ProviderName.LAMBDA_LABS: "us-south-2",
+        },
+        OrkestrRegion.US_SOUTH_3: {
+            ProviderName.LAMBDA_LABS: "us-south-3",
         },
         OrkestrRegion.US_CENTRAL: {
             ProviderName.AWS: "us-east-2",  # AWS doesn't have central, using east-2
