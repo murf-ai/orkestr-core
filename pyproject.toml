@@ -1,21 +1,20 @@
 [project]
 name = "orkestr-core"
-
-[tool.poetry]
-name = "orkestr-core"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "joel.gee.roy",email = "joel.gee.roy@murf.ai"}
+    {name = "joel.gee.roy", email = "joel.gee.roy@murf.ai"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
-packages = [{include = "orkestr_core", from = "src"}]
+dependencies = [
+    "pydantic>=2.10.6,<3.0.0",
+    "httpx>=0.28.1,<0.29.0",
+    "python-dotenv>=1.1.0,<2.0.0",
+]
 
-[tool.poetry.dependencies]
-pydantic = ">=2.10.6,<3.0.0"
-httpx = ">=0.28.1,<0.29.0"
-python-dotenv = ">=1.1.0,<2.0.0"
+[tool.poetry]
+packages = [{include = "orkestr_core", from = "src"}]
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.5"
