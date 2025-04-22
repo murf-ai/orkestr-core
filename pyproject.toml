@@ -1,6 +1,6 @@
 [project]
 name = "orkestr-core"
-version = "0.1.6"
+version = "0.1.7"
 description = "Framework for orchestrating infrastructure and services in a multi-cloud environment"
 authors = [
     {name = "joel.gee.roy", email = "joel.gee.roy@murf.ai"}
@@ -12,6 +12,8 @@ dependencies = [
     "httpx>=0.28.1,<0.29.0",
     "python-dotenv>=1.1.0,<2.0.0",
 ]
+license = "MIT"
+license-files = ["LICENSE"]
 
 [tool.poetry]
 packages = [{include = "orkestr_core", from = "src"}]
