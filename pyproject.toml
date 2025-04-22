@@ -1,5 +1,8 @@
 [project]
 name = "orkestr-core"
+
+[tool.poetry]
+name = "orkestr-core"
 version = "0.1.0"
 description = ""
 authors = [
@@ -12,8 +15,6 @@ dependencies = [
     "httpx (>=0.28.1,<0.29.0)",
     "python-dotenv (>=1.1.0,<2.0.0)",
 ]
-
-[tool.poetry]
 packages = [{include = "orkestr_core", from = "src"}]
 
 [tool.poetry.group.test.dependencies]
