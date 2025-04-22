@@ -1,7 +1,7 @@
 [project]
 name = "orkestr-core"
-version = "0.1.0"
-description = ""
+version = "0.1.6"
+description = "Framework for orchestrating infrastructure and services in a multi-cloud environment"
 authors = [
     {name = "joel.gee.roy", email = "joel.gee.roy@murf.ai"}
 ]
