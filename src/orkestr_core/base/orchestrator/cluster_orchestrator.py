@@ -105,5 +105,10 @@ class ClusterOrchestrator:
 
     def handle_cluster_scale_failed(self, cluster_id: str, region: OrkestrRegion, error_data: dict):
         logger.error(f"Cluster {cluster_id} in region {region.value} scale failed with error: {error_data}")
+        datastore = self.get_datastore()
+        cluster_data = datastore.get_cluster(cluster_id, region=region)
+        cluster = Cluster(**cluster_data)
+        cluster.pre_booting_machines = max(0, cluster.pre_booting_machines - 1)
+        datastore.save_cluster(cluster)
         # @TODO: Implement retry logic or alerting mechanism
         

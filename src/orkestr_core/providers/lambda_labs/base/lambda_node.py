@@ -24,7 +24,7 @@ class LambdaNode(Node):
                 self.status = NodeStatus.BOOTING.value
             else:
                 logger.warning(f"Can't start Node {self.node_id}. It is in {self.status} state.")
-                return
+                return None
             datastore = self.get_datastore()
             region = RegionMapper.get_provider_region(orkestr_region=OrkestrRegion[self.region], provider=self.provider)
             node_spec_dict = datastore.get_node_spec(self.node_spec, self.region)
@@ -37,7 +37,7 @@ class LambdaNode(Node):
                 logger.info("User data script found for node spec version {self.node_spec_version} in {node_spec}: {user_data_script}.")
             except Exception as e:
                 logger.error(f"Node spec version {self.node_spec_version} not found for node {self.node_id} in {node_spec}.")
-                raise e
+                return None
             node_name = self.name or self.node_id
             res = await lambda_labs_client.launch_instance(
                 name=node_name,
@@ -59,7 +59,7 @@ class LambdaNode(Node):
             
         except Exception as e:
             self.status = "unhealthy"
-            raise e
+            return None
         return new_instances[0] if new_instances else None
         
     async def stop(self) -> Optional[str]:
